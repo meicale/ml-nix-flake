@@ -45,7 +45,7 @@
         ];
 
         shellHook = ''
-          if [ ! -f pyproject.toml ]; then
+          if [ -f pyproject.toml ]; then
             uv sync
             . .venv/bin/activate
           fi
